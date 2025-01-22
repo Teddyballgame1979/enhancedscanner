@@ -21,9 +21,13 @@ This enhanced vulnerability scanner is designed to automate the process of ident
 
 ## Installation
 
+Make file executable:
+```
+sudo chmod +x enhancedscanner.py
+```
 To use this tool, ensure you have the following dependencies installed:
 
-```bash
+```
 pip install python-nmap requests beautifulsoup4
 ```
 
