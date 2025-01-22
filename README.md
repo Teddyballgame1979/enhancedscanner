@@ -1,117 +1,96 @@
-# Title 
-
-Description
+![A futuristic cyber security command center](https://github.com/user-attachments/assets/d913ccf1-6e83-4a04-9188-1f2e1342439d)
 
 ## Support FOSS future development - Simping for donations here 👇
 
-<a href="https://www.buymeacoffee.com/notarealdev">
+<a href="https://www.buymeacoffee.com/diatasso">
     <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a cat&emoji=🐈&slug=notarealdev&button_colour=9123cd&font_colour=ffffff&font_family=Bree&outline_colour=ffffff&coffee_colour=FFDD00" />
 </a>
 
 ---
 
-# Tool Name
+# Enhanced Vulnerability Scanner
 
-This repository contains scripts to automate the installation
+## Overview
 
-## What This Tool Does
+This enhanced vulnerability scanner is designed to automate the process of identifying potential security issues in networked systems. It combines multiple techniques to detect vulnerabilities, including:
 
-- **Linux**: Installs Docker Engine, Docker CLI, and Docker Compose.
-- **macOS**: Automates the installation of Docker Desktop, which includes Docker Engine, Docker CLI, Docker Compose, Kubernetes, and Credential Helper.
-- **Windows**: Provides a script to install Docker Desktop for Windows users.
-
-### FEATURES
-
-1. **title**:
-   - The backbone of blah blah blah
-2. **title** 
-   - ***[Example](https://example.com/).***
-
-3. **Title**
-   - ***[text](https://example.com).***
-
-4. **text**:
-   - text
-     - text
-   - text
-   - text
-
-5. **title**:
-   - text.
-     - text
-       - text
-
-
-## Prerequisites
-
-- **Linux**: A Debian-based distribution (like Ubuntu), `curl` installed.
-- **macOS**: Version 10.14 (Mojave) or newer.
-- **Windows**: Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later), or Windows 11. PowerShell must be available, and WSL 2 must be enabled for Docker Desktop.
-
-# Installation Instructions
+1. Network scanning using Nmap
+2. Vulners API integration
+3. Nmap scripting engine
+4. Common Platform Enumeration (CPE) checks
 
 ## Installation
 
-```bash
-# text
-# text
-https://example.com
-# text
-text
-#Enjoy
-```
-
-### For Linux and macOS Users
-
-1. Open a terminal window.
-2. Clone the repository to your local machine:
+To use this tool, ensure you have the following dependencies installed:
 
 ```bash
-git clone https://github.com/
+pip install python-nmap requests beautifulsoup4
 ```
 
-3. Navigate to the cloned directory:
+Also, make sure you have Nmap installed on your system.
 
-```bash
-cd 
-```
+## Usage
 
-4. Make the universal installer script executable:
-
-```bash
-chmod +x 
-```
-
-5. Run the universal installer script:
-
-```bash
-./
-```
-
-The script will detect your operating system and prompt you to confirm the installation of the appropriate Docker setup for your system.
-
-### For Windows Users
-
-1. Open PowerShell as Administrator.
-2. Navigate to where you want to download the script.
-3. Download the PowerShell installation script:
-
-```powershell
+Run the scanner using the following command:
 
 ```
-
-4. Run the script:
-
-```powershell
-.\
+python3 enhancedscanner.py -r <ip_range> [-p <ports>] [-o <output_file>] [-v]
 ```
+
+Example:
+```
+python3 enhancedscanner.py -r 192.168.1.0/24 -p 80,443,22,23 -o scan_results.json -v
+```
+
+## Features
+
+1. **Comprehensive Scanning**: 
+   - Scans IP ranges and specific ports
+   - Detects open services and versions
+
+2. **Multi-source Vulnerability Detection**:
+   - Uses Vulners API for known vulnerabilities
+   - Leverages Nmap scripts for advanced checks
+   - Checks CPE database for software matches
+
+3. **Detailed Reporting**:
+   - Generates JSON reports with vulnerability details
+   - Includes CVE numbers, descriptions, and severity levels
+
+4. **Flexible Output Options**:
+   - Saves results to a specified JSON file
+   - Provides verbose console output
+
+5. **Performance Tracking**:
+   - Displays total scan duration
+
+## Security Considerations
+
+1. **Permission Required**: Only scan networks you own or have explicit permission to test.
+2. **Rate Limiting**: Be aware of API rate limits when using external services.
+3. **False Positives**: Verify critical findings manually, as automated scans can produce false positives.
+
+## Future Enhancements
+
+1. Add more vulnerability databases
+2. Implement parallel processing for faster scans
+3. Include remediation suggestions in reports
+
+## License
+
+This software is released under the MIT License. See LICENSE.txt for details.
+
+## Contributing
+
+Contributions are welcome! Please submit pull requests with clear explanations of changes.
+
 
 Please ensure you've met all the prerequisites for your operating system before running the installation scripts.
 
 
 ## Contributing
 
-We welcome contributions! Please follow these steps to contribute to darooch:
+We welcome contributions! Please follow these steps to contribute:
 
 1. Fork the Project.
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
@@ -135,6 +114,6 @@ This README provides a comprehensive guide for users to get started, understand 
 
 As always = TY 😊 
 
-<a href="https://www.buymeacoffee.com/notarealdev">
+<a href="https://www.buymeacoffee.com/diatasso">
     <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a cat&emoji=🐈&slug=notarealdev&button_colour=9123cd&font_colour=ffffff&font_family=Bree&outline_colour=ffffff&coffee_colour=FFDD00" />
 </a>
