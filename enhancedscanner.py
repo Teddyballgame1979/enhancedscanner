@@ -112,15 +112,19 @@ def main():
     scanner = VulnerabilityScanner()
     
     start_time = datetime.now()
-    print(f"Starting scan at {start_time}")
+    print(f"\n🔍 Scan initiated at: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print("------------------------------------------------------------")
+    print("Scanning in progress... Please wait.")
     
     vulnerabilities = scanner.scan_network(args.range, args.ports)
     
     end_time = datetime.now()
     elapsed_time = end_time - start_time
     
-    print("\nScan completed.")
-    print(f"Total time taken: {elapsed_time}")
+    print("\n✅ Scan completed successfully!")
+    print(f"⏳ Total scan duration: {elapsed_time}")
+    print("------------------------------------------------------------")
+    print("Scan Summary:")
     
     if vulnerabilities:
         print("\nVulnerabilities found:")
